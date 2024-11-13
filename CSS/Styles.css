@@ -1,0 +1,195 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and Colors */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f7f3; /* Light beige for a calm, natural feel */
+    color: #333; /* Dark grey for readability */
+}
+
+header {
+    background-color: #006400; /* Dark green for header */
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and Navigation */
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a8d5ba; /* Light green for hover effect */
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('path/to/hero-image.jpg'); /* Replace with a natural/wellness background */
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    padding: 0.8rem 2rem;
+    background-color: #a8d5ba; /* Light green button */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #7eb693; /* Darker green on hover */
+}
+
+/* Categories Section */
+#categories {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#categories h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    background-color: #e8f5e9; /* Very light green */
+    border-radius: 8px;
+    padding: 2rem;
+    width: 45%; /* Responsive width */
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-item p {
+    font-size: 1rem;
+}
+
+/* Benefits Section */
+#benefits {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f0ede5; /* Beige for emphasis */
+}
+
+#benefits h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#benefits p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+footer {
+    background-color: #006400; /* Dark green */
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #a8d5ba;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+}
+
+.newsletter button {
+    padding: 0.5rem 1.5rem;
+    background-color: #a8d5ba;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #7eb693;
+}

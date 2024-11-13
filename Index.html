@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Supplements</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #5ab65d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* To allow positioning of the logo */
+        }
+        header img {
+            position: absolute;
+            top: 20px;
+            border-radius: 50%; /* Creates a circular shape */
+            left: 20px;
+            width: 50px; /* Adjust size as needed */
+            height: auto;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #e7e4d1;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Categories Section */
+        #categories {
+            padding: 40px 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .category-item {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .category-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .newsletter form {
+            display: inline-block;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="Images/Peach and Green Simple Icon Health and Fitness Logo.png" alt="Herbal Supplements Logo"> <!-- Replace logo.png with your logo image file -->
+        <h1>Herbal Supplements</h1>
+        <p>Natural wellness supplements to enrich your daily life</p>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#categories">Vitamins</a>
+            <a href="#categories">Minerals</a>
+            <a href="#categories">Herbs</a>
+            <a href="#categories">Essential Oils</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Discover Our Range of Supplements</h2>
+        <p>Vitamins, Minerals, Herbs, Essential Oils – all to support a healthier you!</p>
+        <button class="cta-button">Explore Products</button>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <!-- Vitamins Category -->
+        <div class="category-item">
+            <img src="Images/Vit.jpg" alt="Vitamins Image"> <!-- Replace with your actual image -->
+            <h4>Vitamins</h4>
+            <p>Vitamins are essential for various bodily functions, like immune support and bone health.</p>
+        </div>
+        
+        <!-- Minerals Category -->
+        <div class="category-item">
+            <img src="Images/Mine.jpeg" alt="Minerals Image"> <!-- Replace with your actual image -->
+            <h4>Minerals</h4>
+            <p>Minerals like calcium, magnesium, and zinc play a role in maintaining body structures and processes.</p>
+        </div>
+        
+        <!-- Herbs Category -->
+        <div class="category-item">
+            <img src="Images/Herb.jpeg" alt="Herbs Image"> <!-- Replace with your actual image -->
+            <h4>Herbs</h4>
+            <p>Herbal supplements use plant extracts to support wellness naturally.</p>
+        </div>
+        
+        <!-- Essential Oils Category -->
+        <div class="category-item">
+            <img src="Images/essential-oils.jpg" alt="Essential Oils Image"> <!-- Replace with your actual image -->
+            <h4>Essential Oils</h4>
+            <p>Essential oils provide aromatherapy benefits and may aid in relaxation and stress relief.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest products and offers.</p>
+        <form id="newsletterForm">
+            <input type="email" id="emailInput" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+            <h3>Contact us</h3>
+            <p>0787143784</p>
+            <P>Location:NR5 KIGALI-KABEZA</P>
+        </form>
+    </section>
+
+    <script>
+        // Smooth scrolling to the "Categories" section
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('categories').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Newsletter form validation
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('emailInput').value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (emailPattern.test(emailInput)) {
+                alert('Thank you for subscribing!');
+                document.getElementById('emailInput').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Category information pop-ups
+        const categories = document.querySelectorAll('.category-item');
+        const categoryInfo = {
+            'Vitamins': 'Vitamins are essential for various bodily functions, like immune support and bone health.',
+            'Minerals': 'Minerals like calcium, magnesium, and zinc play a role in maintaining body structures and processes.',
+            'Herbs': 'Herbal supplements use plant extracts to support wellness naturally.',
+            'Essential Oils': 'Essential oils provide aromatherapy benefits and may aid in relaxation and stress relief.'
+        };
+
+        categories.forEach(category => {
+            category.addEventListener('click', function() {
+                const categoryTitle = this.querySelector('h4').innerText;
+                alert(categoryInfo[categoryTitle]);
+            });
+        });
+    </script>
+</body>
+</html>
